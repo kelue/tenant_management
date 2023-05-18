@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestOwner(FrappeTestCase):
+class TestPropertyOwner(FrappeTestCase):
 	pass

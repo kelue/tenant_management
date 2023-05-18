@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Owner(Document):
+class PropertyOwner(Document):
 	pass

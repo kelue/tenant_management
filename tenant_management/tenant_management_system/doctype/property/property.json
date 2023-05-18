@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ACC.####",
+ "creation": "2023-05-18 16:18:57.014324",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "property_name",
+  "address",
+  "accomodation",
+  "owner1",
+  "agent"
+ ],
+ "fields": [
+  {
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accomodation",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Accomodation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "owner1",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Property Owner"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "Agent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-18 16:21:25.228438",
+ "modified_by": "Administrator",
+ "module": "Tenant Management System",
+ "name": "Property",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agent",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "property_name"
+}
