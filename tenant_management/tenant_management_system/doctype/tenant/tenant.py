@@ -11,6 +11,8 @@ class Tenant(Document):
         self.full_name = f'{self.first_name} {self.last_name or ""}'
         self.validate_maximum_occupancy()
 
+        
+
     def validate_maximum_occupancy(self):
         property = frappe.get_doc("Property", self.residence)
 

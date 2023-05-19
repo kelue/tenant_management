@@ -8,7 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "owner_name",
+  "first_name",
   "last_name",
   "full_name",
   "column_break_alaz",
@@ -20,13 +20,7 @@
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "owner_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "First Name",
+   "label": "Email",
    "reqd": 1
   },
   {
@@ -55,12 +49,19 @@
   {
    "fieldname": "column_break_alaz",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
   }
  ],
  "image_field": "owner_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-19 00:23:11.877228",
+ "modified": "2023-05-19 10:09:44.160705",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Property Owner",
@@ -96,5 +97,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "owner_name"
+ "title_field": "first_name"
 }
