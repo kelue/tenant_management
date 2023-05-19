@@ -1,37 +1,66 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "AGT.####",
+ "autoname": "format:{last_name}-{first_name}-AGT.{####}",
  "creation": "2023-05-18 16:01:10.248346",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "agent_name",
-  "email"
+  "first_name",
+  "last_name",
+  "full_name",
+  "email",
+  "phone_number",
+  "agent_image"
  ],
  "fields": [
   {
-   "fieldname": "agent_name",
+   "fieldname": "email",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Agent Name",
+   "label": "Email",
    "reqd": 1
   },
   {
-   "fieldname": "email",
+   "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Email"
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agent_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Agent Image"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
   }
  ],
+ "image_field": "agent_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-18 16:02:58.656919",
+ "modified": "2023-05-19 00:21:57.214720",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Agent",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -61,6 +90,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "agent_name"
+ "states": []
 }

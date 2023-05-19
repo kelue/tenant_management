@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "ACC.####",
+ "autoname": "field:property_name",
  "creation": "2023-05-18 16:18:57.014324",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,9 +10,14 @@
  "field_order": [
   "property_name",
   "address",
+  "column_break_1sj9",
   "accomodation",
-  "owner1",
-  "agent"
+  "price",
+  "section_break_efrc",
+  "property_owner",
+  "column_break_aeou",
+  "agent",
+  "property_image"
  ],
  "fields": [
   {
@@ -20,7 +25,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Property Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "address",
@@ -37,25 +43,50 @@
    "reqd": 1
   },
   {
-   "fieldname": "owner1",
-   "fieldtype": "Link",
-   "label": "Owner",
-   "options": "Property Owner"
-  },
-  {
    "fieldname": "agent",
    "fieldtype": "Link",
    "label": "Agent",
    "options": "Agent"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_efrc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_aeou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_1sj9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Property Image"
+  },
+  {
+   "fieldname": "property_owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Property Owner"
   }
  ],
+ "image_field": "property_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-18 16:21:25.228438",
+ "modified": "2023-05-19 00:41:29.107028",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Property",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

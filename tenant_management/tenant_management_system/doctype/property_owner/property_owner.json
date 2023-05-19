@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "ONR.####",
+ "autoname": "format:{last_name}-{first_name}-ONR.{####}",
  "creation": "2023-05-18 15:04:06.444852",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,7 +9,12 @@
  "engine": "InnoDB",
  "field_order": [
   "owner_name",
-  "email"
+  "last_name",
+  "full_name",
+  "column_break_alaz",
+  "email",
+  "phone",
+  "owner_image"
  ],
  "fields": [
   {
@@ -21,17 +26,45 @@
    "fieldname": "owner_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Owner Name",
+   "label": "First Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "owner_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Owner Image"
+  },
+  {
+   "fieldname": "column_break_alaz",
+   "fieldtype": "Column Break"
   }
  ],
+ "image_field": "owner_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-18 15:06:11.240274",
+ "modified": "2023-05-19 00:23:11.877228",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Property Owner",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -43,6 +76,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Owner",
    "share": 1,
    "write": 1
   }

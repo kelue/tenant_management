@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "autoname": "{occupant_name}-{property_name}-{##}",
+ "creation": "2023-05-18 23:06:51.328110",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "occupant",
+  "column_break_ttpw",
+  "agent",
+  "section_break_pshc",
+  "residence",
+  "address",
+  "price",
+  "column_break_v0bs",
+  "duration",
+  "start_date",
+  "end_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "occupant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Occupant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "residence",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Residence",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rental Agreement",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ttpw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "residence.agent",
+   "fieldname": "agent",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Agent",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_pshc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "residence.price",
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "label": "Price(Per Annum)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Duration",
+   "options": "Annually\nQuarterly\nMonthtly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_v0bs",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-19 00:51:28.916011",
+ "modified_by": "Administrator",
+ "module": "Tenant Management System",
+ "name": "Rental Agreement",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agent",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
