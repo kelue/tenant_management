@@ -20,9 +20,9 @@ class RentalAgreement(Document):
     def get_duration(self):
         #select number of days based on duration
         duration = {
-            "Annually": 365,
-            "Quarterly": 90,
-            "Monthly": 30
+            "Annual": 365,
+            "Quarter": 90,
+            "Month": 30
         }
         return duration[self.duration]
     

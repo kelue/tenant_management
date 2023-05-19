@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BILL.###",
+ "creation": "2023-05-19 04:20:34.292827",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "occupant",
+  "column_break_kist",
+  "lease_agreement",
+  "section_break_gc1q",
+  "amount_due",
+  "payment_date",
+  "column_break_ecev",
+  "rent_expires",
+  "amended_from",
+  "paid"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_kist",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lease_agreement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lease Agreement",
+   "options": "Rental Agreement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_gc1q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount_due",
+   "fieldtype": "Currency",
+   "label": "Amount Due",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ecev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Billing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Occupant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "lease_agreement.end_date",
+   "fieldname": "rent_expires",
+   "fieldtype": "Date",
+   "label": "Date of expiration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid",
+   "fieldtype": "Select",
+   "label": "Paid",
+   "options": "No\nYes",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-19 07:59:42.136235",
+ "modified_by": "Administrator",
+ "module": "Tenant Management System",
+ "name": "Rent Billing",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agent",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tenant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property_owner",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -83,7 +83,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Duration",
-   "options": "Annually\nQuarterly\nMonthtly",
+   "options": "Annual\nQuarter\nMonth",
    "reqd": 1
   },
   {
@@ -113,7 +113,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-05-19 02:51:35.028838",
+ "modified": "2023-05-19 04:23:53.514020",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Rental Agreement",

@@ -93,7 +93,7 @@
  "image_field": "property_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-19 03:38:47.066544",
+ "modified": "2023-05-19 08:01:38.220345",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Property",
@@ -123,6 +123,15 @@
    "role": "Agent",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tenant",
+   "share": 1
   }
  ],
  "sort_field": "modified",
