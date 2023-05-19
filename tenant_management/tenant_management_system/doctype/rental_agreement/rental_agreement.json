@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "{occupant_name}-{property_name}-{##}",
+ "autoname": "format:{full_name}-{residence}-LS.{###}",
  "creation": "2023-05-18 23:06:51.328110",
  "default_view": "List",
  "doctype": "DocType",
@@ -8,17 +8,18 @@
  "engine": "InnoDB",
  "field_order": [
   "occupant",
-  "column_break_ttpw",
+  "full_name",
   "agent",
-  "section_break_pshc",
+  "column_break_ttpw",
   "residence",
   "address",
   "price",
-  "column_break_v0bs",
+  "section_break_pshc",
   "duration",
+  "amended_from",
+  "column_break_v0bs",
   "start_date",
-  "end_date",
-  "amended_from"
+  "end_date"
  ],
  "fields": [
   {
@@ -64,6 +65,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "fetch_from": "residence.address",
    "fieldname": "address",
    "fieldtype": "Data",
    "label": "Address",
@@ -93,21 +95,29 @@
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
-   "label": "End Date"
+   "label": "End Date",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_v0bs",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "occupant.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-05-19 00:51:28.916011",
+ "modified": "2023-05-19 02:51:35.028838",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Rental Agreement",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

@@ -20,4 +20,5 @@ class Tenant(Document):
 
         )
         if count >= property.accomodation:
-            frappe.throw("No available occupancy at this residence")
+            message = f'No available occupancy at {self.residence}'
+            frappe.throw(message)

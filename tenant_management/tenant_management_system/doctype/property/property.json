@@ -17,7 +17,9 @@
   "property_owner",
   "column_break_aeou",
   "agent",
-  "property_image"
+  "property_image",
+  "section_break_ctnb",
+  "description"
  ],
  "fields": [
   {
@@ -77,12 +79,21 @@
    "fieldtype": "Link",
    "label": "Owner",
    "options": "Property Owner"
+  },
+  {
+   "fieldname": "section_break_ctnb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
   }
  ],
  "image_field": "property_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-19 00:41:29.107028",
+ "modified": "2023-05-19 03:38:47.066544",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Property",
@@ -117,5 +128,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "property_name"
+ "title_field": "property_name",
+ "track_views": 1
 }
